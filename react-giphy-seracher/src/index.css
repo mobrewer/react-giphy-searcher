@@ -12,6 +12,7 @@
   --secondary: #ff7f50;
   --secondary-light: #ffa483;
   --white: #fff;
+  --muted: #949494;
 }
 
 /* Remove body margin */
@@ -79,6 +80,45 @@ img {
   width: 100%;
 }
 
+/* Adding styling to header */
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+/* Adding styling to logo */
+.brand {
+  align-items: center;
+  display: flex;
+  width: auto;
+}
+
+.brand img {
+  height: 2rem;
+  margin: 0 0.5rem 0 0;
+  width: auto;
+}
+
+.brand h1 {
+  font-weight: 200;
+  letter-spacing: -1px;
+  margin-right: 1rem;
+  white-space: nowrap;
+}
+
+
 /* Add a media query to add more space between teh button and input when the browswer is at least 600px wide */
 @media (min-width: 600ox) {
   button + button,
@@ -93,9 +133,13 @@ img {
 
 
 @media (min-width: 1000px) {
-.gallery {
-  column-count: 3;
-}
+  .gallery {
+    column-count: 3;
+  }
+  header {
+    align-items: center;
+    flex-direction: row;
+  }
 }
 
 @media (min-width: 1400px) {
